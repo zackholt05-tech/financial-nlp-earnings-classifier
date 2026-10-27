@@ -1,0 +1,3 @@
+-r requirements.txt
+pytest>=9.1,<10
+matplotlib>=3.10   # paper figures (experiments/paper_assets.py)

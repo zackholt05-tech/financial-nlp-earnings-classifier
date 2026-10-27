@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Private / local-only files (never commit)
+project-spec.md
+.env
+.env.*
+!.env.example
+
+# Project artifacts / caches
+/data/
+/artifacts/
+*.npz
+*.pt
+
+# Run directories: weights and caches stay local
+runs/**/*.pt
+runs/**/*.npz
+runs/**/data_cache/
+# Per-event real-data predictions (derived from provider prices) stay local
+runs/phase4/
+ci-runs/
+
+# HF / model caches
+.cache/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

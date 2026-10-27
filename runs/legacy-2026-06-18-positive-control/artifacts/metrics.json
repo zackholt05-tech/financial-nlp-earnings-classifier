@@ -1,0 +1,125 @@
+{
+  "train_info": {
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.6055588788456387,
+        "val_auc": 1.0,
+        "val_acc": 1.0
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.2204278823402193,
+        "val_auc": 1.0,
+        "val_acc": 1.0
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.03917834286888441,
+        "val_auc": 1.0,
+        "val_acc": 1.0
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.010051981442504458,
+        "val_auc": 1.0,
+        "val_acc": 1.0
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.004622183791879151,
+        "val_auc": 1.0,
+        "val_acc": 1.0
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.0029987814163582194,
+        "val_auc": 1.0,
+        "val_acc": 1.0
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.002157163832129704,
+        "val_auc": 1.0,
+        "val_acc": 1.0
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.0016321062964076798,
+        "val_auc": 1.0,
+        "val_acc": 1.0
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.0017018765469806062,
+        "val_auc": 1.0,
+        "val_acc": 1.0
+      }
+    ],
+    "best_val_auc": 1.0,
+    "best_epoch": 1
+  },
+  "n_trainable_params": 3075,
+  "metrics": {
+    "val": {
+      "n": 60,
+      "auc": 1.0,
+      "accuracy": 1.0,
+      "majority_baseline_acc": 0.6833333333333333,
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "pos_rate": 0.6833333333333333,
+      "confusion_matrix": [
+        [
+          19,
+          0
+        ],
+        [
+          0,
+          41
+        ]
+      ]
+    },
+    "test": {
+      "n": 80,
+      "auc": 1.0,
+      "accuracy": 1.0,
+      "majority_baseline_acc": 0.5,
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "pos_rate": 0.5,
+      "confusion_matrix": [
+        [
+          40,
+          0
+        ],
+        [
+          0,
+          40
+        ]
+      ]
+    }
+  },
+  "baseline_lr_test": {
+    "n": 80,
+    "auc": 1.0,
+    "accuracy": 1.0,
+    "majority_baseline_acc": 0.5,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "pos_rate": 0.5,
+    "confusion_matrix": [
+      [
+        40,
+        0
+      ],
+      [
+        0,
+        40
+      ]
+    ]
+  }
+}

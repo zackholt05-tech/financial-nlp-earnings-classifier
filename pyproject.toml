@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "financial-nlp-earnings-classifier"
+version = "0.2.0"
+description = "Reproducible FinBERT pipeline for post-earnings direction classification from transcripts and headlines."
+readme = "README.md"
+authors = [{ name = "Zackary Holt" }]
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.13"
+dependencies = [
+    "torch>=2.12,<3",
+    "transformers>=5.12,<6",
+    "tokenizers>=0.22,<0.23",
+    "huggingface-hub>=1.20,<2",
+    "yfinance>=1.4,<2",
+    "lxml>=6.1",
+    "pandas>=3.0,<4",
+    "numpy>=2.4,<3",
+    "scikit-learn>=1.9,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=9.1,<10", "matplotlib>=3.10"]
+
+[tool.setuptools]
+packages = ["earnings_classifier"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+markers = [
+    "slow: end-to-end tests that load a (tiny) pretrained encoder from the Hugging Face Hub",
+]
+addopts = "-ra"

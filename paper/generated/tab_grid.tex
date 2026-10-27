@@ -1,0 +1,17 @@
+\begin{tabular}{llrr}
+\toprule
+Model & Setting & Chunks & Val AUC \\
+\midrule
+Logistic regression & $C=0.01$ & 1 & 0.539 \\
+Logistic regression & $C=0.1$ & 1 & 0.523 \\
+Logistic regression & $C=1$ & 1 & 0.524 \\
+Logistic regression & $C=0.01$ & 8 & 0.498 \\
+Logistic regression & $C=0.1$ & 8 & 0.453 \\
+Logistic regression & $C=1$ & 8 & 0.452 \\
+\midrule
+Fusion head & 0 hidden layers & 1 & 0.602 $\pm$ 0.008 \\
+Fusion head & 1 hidden layer & 1 & 0.594 $\pm$ 0.005 \\
+Fusion head & 0 hidden layers & 8 & 0.568 $\pm$ 0.010 \\
+Fusion head & 1 hidden layer & 8 & 0.579 $\pm$ 0.007 \\
+\bottomrule
+\end{tabular}

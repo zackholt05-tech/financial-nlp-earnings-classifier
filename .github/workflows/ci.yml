@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  TORCH_CPU_INDEX: https://download.pytorch.org/whl/cpu
+
+jobs:
+  unit:
+    name: Unit tests (no network)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements-lock.txt
+      - name: Install CPU-only torch, then the locked environment
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "torch==2.12.1" --index-url "$TORCH_CPU_INDEX"
+          python -m pip install -r requirements-lock.txt
+      - name: Unit tests
+        run: python -m pytest -m "not slow"
+      - name: Paper numbers and result tables match the committed results
+        run: |
+          python experiments/paper_assets.py
+          python experiments/report_tables.py > results/phase4/tables.md
+          git diff --exit-code -- 'paper/generated/*.tex' results/phase4/tables.md
+
+  smoke:
+    name: End-to-end smoke test and control demos (tiny BERT)
+    runs-on: ubuntu-latest
+    needs: unit
+    env:
+      HF_HOME: ${{ github.workspace }}/.hf-cache
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements-lock.txt
+      - uses: actions/cache@v6
+        with:
+          path: .hf-cache
+          key: hf-bert-tiny-30b0a37ccaaa32f332884b96992754e246e48c5f
+      - name: Install CPU-only torch, then the locked environment
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "torch==2.12.1" --index-url "$TORCH_CPU_INDEX"
+          python -m pip install -r requirements-lock.txt
+      - name: Smoke test
+        run: python -m pytest -m slow
+      - name: Synthetic control demos (pipeline checks, not market evidence)
+        run: |
+          python main.py --preset tiny --data-mode synthetic-negative-control --device cpu --no-cache --runs-dir ci-runs
+          python main.py --preset tiny --data-mode synthetic-positive-control --device cpu --no-cache --runs-dir ci-runs

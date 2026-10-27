@@ -1,0 +1,235 @@
+{
+  "label": "SYNTHETIC PIPELINE CONTROLS - not market evidence",
+  "summary": {
+    "synthetic-negative-control": {
+      "n_runs": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "neural_val_auc": {
+        "mean": 0.5482893141116826,
+        "sd": 0.03724248608108451,
+        "min": 0.5096153846153846,
+        "max": 0.6
+      },
+      "neural_test_auc": {
+        "mean": 0.46517286708798267,
+        "sd": 0.07472897806611928,
+        "min": 0.3921694480102696,
+        "max": 0.5784865540963102
+      },
+      "logistic_regression_val_auc": {
+        "mean": 0.5247288144675635,
+        "sd": 0.08603663630804748,
+        "min": 0.39135802469135805,
+        "max": 0.6033653846153847
+      },
+      "logistic_regression_test_auc": {
+        "mean": 0.4689676759911034,
+        "sd": 0.05406941426248547,
+        "min": 0.38896020539152754,
+        "max": 0.5144736842105263
+      }
+    },
+    "synthetic-positive-control": {
+      "n_runs": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "neural_val_auc": {
+        "mean": 1.0,
+        "sd": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "neural_test_auc": {
+        "mean": 1.0,
+        "sd": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "logistic_regression_val_auc": {
+        "mean": 1.0,
+        "sd": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "logistic_regression_test_auc": {
+        "mean": 1.0,
+        "sd": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      }
+    }
+  },
+  "runs": [
+    {
+      "run": "20261027T152850881Z_synthetic-negative-control_2497e8d2",
+      "data_mode": "synthetic-negative-control",
+      "seed": 0,
+      "model": "ProsusAI/finbert@4556d13",
+      "git_commit": "d286ca05cfa7ce7d288c5011535ac4beecd160a8",
+      "n": {
+        "train": 259,
+        "val": 56,
+        "test": 80
+      },
+      "neural_val_auc": 0.5732574679943101,
+      "neural_test_auc": 0.496875,
+      "logistic_regression_val_auc": 0.5633001422475107,
+      "logistic_regression_test_auc": 0.5062500000000001
+    },
+    {
+      "run": "20261027T152926568Z_synthetic-negative-control_b8790998",
+      "data_mode": "synthetic-negative-control",
+      "seed": 1,
+      "model": "ProsusAI/finbert@4556d13",
+      "git_commit": "d286ca05cfa7ce7d288c5011535ac4beecd160a8",
+      "n": {
+        "train": 258,
+        "val": 57,
+        "test": 80
+      },
+      "neural_val_auc": 0.5333333333333333,
+      "neural_test_auc": 0.4122807017543859,
+      "logistic_regression_val_auc": 0.39135802469135805,
+      "logistic_regression_test_auc": 0.4373433583959899
+    },
+    {
+      "run": "20261027T153000594Z_synthetic-negative-control_419b074b",
+      "data_mode": "synthetic-negative-control",
+      "seed": 2,
+      "model": "ProsusAI/finbert@4556d13",
+      "git_commit": "d286ca05cfa7ce7d288c5011535ac4beecd160a8",
+      "n": {
+        "train": 258,
+        "val": 58,
+        "test": 80
+      },
+      "neural_val_auc": 0.5096153846153846,
+      "neural_test_auc": 0.5784865540963102,
+      "logistic_regression_val_auc": 0.6033653846153847,
+      "logistic_regression_test_auc": 0.49781113195747345
+    },
+    {
+      "run": "20261027T153034339Z_synthetic-negative-control_1f061f14",
+      "data_mode": "synthetic-negative-control",
+      "seed": 3,
+      "model": "ProsusAI/finbert@4556d13",
+      "git_commit": "d286ca05cfa7ce7d288c5011535ac4beecd160a8",
+      "n": {
+        "train": 258,
+        "val": 58,
+        "test": 78
+      },
+      "neural_val_auc": 0.6,
+      "neural_test_auc": 0.44605263157894737,
+      "logistic_regression_val_auc": 0.5776397515527951,
+      "logistic_regression_test_auc": 0.5144736842105263
+    },
+    {
+      "run": "20261027T153109149Z_synthetic-negative-control_e776a5ae",
+      "data_mode": "synthetic-negative-control",
+      "seed": 4,
+      "model": "ProsusAI/finbert@4556d13",
+      "git_commit": "d286ca05cfa7ce7d288c5011535ac4beecd160a8",
+      "n": {
+        "train": 257,
+        "val": 58,
+        "test": 79
+      },
+      "neural_val_auc": 0.5252403846153846,
+      "neural_test_auc": 0.3921694480102696,
+      "logistic_regression_val_auc": 0.48798076923076916,
+      "logistic_regression_test_auc": 0.38896020539152754
+    },
+    {
+      "run": "20261027T153205172Z_synthetic-positive-control_28129f25",
+      "data_mode": "synthetic-positive-control",
+      "seed": 0,
+      "model": "ProsusAI/finbert@4556d13",
+      "git_commit": "d286ca05cfa7ce7d288c5011535ac4beecd160a8",
+      "n": {
+        "train": 259,
+        "val": 56,
+        "test": 80
+      },
+      "neural_val_auc": 1.0,
+      "neural_test_auc": 1.0,
+      "logistic_regression_val_auc": 1.0,
+      "logistic_regression_test_auc": 1.0
+    },
+    {
+      "run": "20261027T153302085Z_synthetic-positive-control_a49a255d",
+      "data_mode": "synthetic-positive-control",
+      "seed": 1,
+      "model": "ProsusAI/finbert@4556d13",
+      "git_commit": "d286ca05cfa7ce7d288c5011535ac4beecd160a8",
+      "n": {
+        "train": 258,
+        "val": 57,
+        "test": 80
+      },
+      "neural_val_auc": 1.0,
+      "neural_test_auc": 1.0,
+      "logistic_regression_val_auc": 1.0,
+      "logistic_regression_test_auc": 1.0
+    },
+    {
+      "run": "20261027T153409767Z_synthetic-positive-control_e6c10ece",
+      "data_mode": "synthetic-positive-control",
+      "seed": 2,
+      "model": "ProsusAI/finbert@4556d13",
+      "git_commit": "d286ca05cfa7ce7d288c5011535ac4beecd160a8",
+      "n": {
+        "train": 258,
+        "val": 58,
+        "test": 80
+      },
+      "neural_val_auc": 1.0,
+      "neural_test_auc": 1.0,
+      "logistic_regression_val_auc": 1.0,
+      "logistic_regression_test_auc": 1.0
+    },
+    {
+      "run": "20261027T153519966Z_synthetic-positive-control_1b48361d",
+      "data_mode": "synthetic-positive-control",
+      "seed": 3,
+      "model": "ProsusAI/finbert@4556d13",
+      "git_commit": "d286ca05cfa7ce7d288c5011535ac4beecd160a8",
+      "n": {
+        "train": 258,
+        "val": 58,
+        "test": 78
+      },
+      "neural_val_auc": 1.0,
+      "neural_test_auc": 1.0,
+      "logistic_regression_val_auc": 1.0,
+      "logistic_regression_test_auc": 1.0
+    },
+    {
+      "run": "20261027T153657049Z_synthetic-positive-control_eb58127f",
+      "data_mode": "synthetic-positive-control",
+      "seed": 4,
+      "model": "ProsusAI/finbert@4556d13",
+      "git_commit": "d286ca05cfa7ce7d288c5011535ac4beecd160a8",
+      "n": {
+        "train": 257,
+        "val": 58,
+        "test": 79
+      },
+      "neural_val_auc": 1.0,
+      "neural_test_auc": 1.0,
+      "logistic_regression_val_auc": 1.0,
+      "logistic_regression_test_auc": 1.0
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "manifest_version": 1,
+  "created_at": "2026-10-27T15:35:20.059732+00:00",
+  "data_mode": "synthetic-positive-control",
+  "is_control": true,
+  "argv": [
+    "main.py",
+    "--data-mode",
+    "synthetic-positive-control",
+    "--seed",
+    "3",
+    "--runs-dir",
+    "runs/controls-finbert"
+  ],
+  "seed": 3,
+  "config": {
+    "model_name": "ProsusAI/finbert",
+    "model_revision": "4556d13015211d73dccd3fdd39d39232506f3e43",
+    "pooling": "mean",
+    "freeze_encoder": true,
+    "use_interactions": true,
+    "use_presence_flags": true,
+    "head_hidden": 64,
+    "head_dropout": 0.5,
+    "head_layers": 0,
+    "document_chunk_len": 384,
+    "max_document_chunks": 8,
+    "headline_max_len": 48,
+    "max_headlines": 16,
+    "horizon_days": 3,
+    "label_threshold": 0.0,
+    "deadband": 0.0,
+    "news_window_days": 3,
+    "document_match_days": 3,
+    "val_fraction": 0.15,
+    "test_fraction": 0.2,
+    "val_start_date": "",
+    "test_start_date": "",
+    "batch_size": 32,
+    "head_lr": 0.001,
+    "encoder_lr": 2e-05,
+    "weight_decay": 0.05,
+    "epochs": 40,
+    "warmup_frac": 0.05,
+    "grad_clip": 1.0,
+    "early_stop_patience": 8,
+    "use_pos_weight": true,
+    "data_mode": "synthetic-positive-control",
+    "n_synthetic_events": 400,
+    "min_real_events": 60,
+    "tickers": [
+      "AAPL",
+      "MSFT",
+      "GOOGL",
+      "AMZN",
+      "META",
+      "NVDA",
+      "TSLA",
+      "JPM",
+      "V",
+      "JNJ",
+      "WMT",
+      "PG",
+      "XOM",
+      "HD",
+      "BAC",
+      "KO",
+      "PEP",
+      "CSCO",
+      "INTC",
+      "NFLX",
+      "AMD",
+      "CRM",
+      "ADBE",
+      "ORCL",
+      "DIS",
+      "NKE",
+      "MCD",
+      "COST",
+      "TMO",
+      "ABBV"
+    ],
+    "earnings_per_ticker": 40,
+    "document_provider": "sec-edgar",
+    "headline_provider": "finnhub",
+    "min_document_chars": 200,
+    "seed": 3,
+    "device": "auto",
+    "data_dir": "data",
+    "cache_dir": "data/cache",
+    "runs_dir": "runs/controls-finbert",
+    "num_workers": 0
+  },
+  "modalities": "both",
+  "dataset_fingerprint": "1b48361d9b82d7917164b70fd46c94efeb45828fa1be3bd1b8f7d7f89099a16b",
+  "events_cache": {
+    "cache_key": "3088f84ce6186de7f54a23826db85dfcbdcd9257292bf410f52de66c45d6b279",
+    "cache_path": "data/cache/events-synthetic-positive-control-3088f84ce6186de7.json",
+    "cache_hit": false,
+    "report": {
+      "usable_events": 400,
+      "modality": {
+        "both": 400,
+        "document_only": 0,
+        "headlines_only": 0,
+        "neither": 0
+      }
+    }
+  },
+  "embeddings_cache": {
+    "key": "3fba4764427af9c3a4164242efcff78b2100d0a93cbc06d95e5183b7d1ba70d5",
+    "hit": false,
+    "path": "data/cache/embeddings-3fba4764427af9c3.npz",
+    "encode_device": "mps"
+  },
+  "cache_policy": {
+    "no_cache": false,
+    "refresh_cache": false
+  },
+  "model": {
+    "name": "ProsusAI/finbert",
+    "revision": "4556d13015211d73dccd3fdd39d39232506f3e43",
+    "tokenizer": "ProsusAI/finbert",
+    "tokenizer_revision": "4556d13015211d73dccd3fdd39d39232506f3e43",
+    "pooling": "mean",
+    "freeze_encoder": true,
+    "head_layers": 0,
+    "n_trainable_params": 3075
+  },
+  "counts": {
+    "events": 400,
+    "used": 394,
+    "split": {
+      "val_start": "2021-12-30",
+      "test_start": "2022-03-28",
+      "purged": {
+        "train": 2,
+        "val": 4
+      },
+      "splits": {
+        "train": {
+          "n": 258,
+          "n_pos": 133,
+          "pos_rate": 0.5155038759689923,
+          "first_entry": "2021-01-06",
+          "last_entry": "2021-12-24",
+          "last_exit": "2021-12-28",
+          "modality": {
+            "both": 258,
+            "document_only": 0,
+            "headlines_only": 0,
+            "neither": 0
+          }
+        },
+        "val": {
+          "n": 58,
+          "n_pos": 30,
+          "pos_rate": 0.5172413793103449,
+          "first_entry": "2021-12-30",
+          "last_entry": "2022-03-23",
+          "last_exit": "2022-03-25",
+          "modality": {
+            "both": 58,
+            "document_only": 0,
+            "headlines_only": 0,
+            "neither": 0
+          }
+        },
+        "test": {
+          "n": 78,
+          "n_pos": 35,
+          "pos_rate": 0.44871794871794873,
+          "first_entry": "2022-03-28",
+          "last_entry": "2022-07-19",
+          "last_exit": "2022-07-21",
+          "modality": {
+            "both": 78,
+            "document_only": 0,
+            "headlines_only": 0,
+            "neither": 0
+          }
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "python": "3.13.17",
+    "torch": "2.12.1",
+    "transformers": "5.12.1",
+    "tokenizers": "0.22.2",
+    "huggingface-hub": "1.20.1",
+    "safetensors": "0.8.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scikit-learn": "1.9.0",
+    "yfinance": "1.4.1"
+  },
+  "platform": {
+    "system": "Darwin",
+    "release": "25.6.0",
+    "machine": "arm64",
+    "device": "mps"
+  },
+  "git": {
+    "commit": "d286ca05cfa7ce7d288c5011535ac4beecd160a8",
+    "dirty": false
+  },
+  "publication_note": "2026-10-27: the absolute local path prefix in argv/config.runs_dir was replaced by the repository-relative path before publication; nothing else was changed."
+}

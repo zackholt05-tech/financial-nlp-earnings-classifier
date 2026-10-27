@@ -1,0 +1,114 @@
+{
+  "stage": "exploratory_headlines",
+  "label": "EXPLORATORY - no training, no selection",
+  "dataset": {
+    "path": "data/frozen/events-real-with-headlines.json",
+    "fingerprint": "ce118a67e773bc89b867d1965dac2ae9242f008eb776c3dc9fcdc5b96f5adcfa"
+  },
+  "events_with_headlines": 111,
+  "entry_range": [
+    "2025-11-05",
+    "2026-10-23"
+  ],
+  "pos_rate": 0.46846846846846846,
+  "headlines_n_per_event": {
+    "median": 64.0,
+    "min": 10,
+    "max": 171
+  },
+  "all_with_headlines": {
+    "zero_shot_headlines": {
+      "n": 111,
+      "auc": 0.42861799217731417,
+      "average_precision": 0.4321125163234184,
+      "note": "rank-only score; probability metrics not applicable"
+    },
+    "bootstrap": {
+      "n_events": 111,
+      "n_weeks": 39,
+      "n_boot": 2000,
+      "n_skipped_single_class": 0,
+      "level": 0.95,
+      "seed": 0,
+      "auc": {
+        "zero_shot_headlines": {
+          "point": 0.42861799217731417,
+          "lo": 0.3227548512770971,
+          "hi": 0.5555910770105141,
+          "boot_sd": 0.058815889685557406
+        }
+      },
+      "diff": {}
+    }
+  },
+  "with_headlines_and_document": {
+    "n": 109,
+    "zero_shot_headlines": {
+      "n": 109,
+      "auc": 0.43509127789046653,
+      "average_precision": 0.4350278446740916,
+      "note": "rank-only score; probability metrics not applicable"
+    },
+    "zero_shot_document": {
+      "n": 109,
+      "auc": 0.41311697092630156,
+      "average_precision": 0.44647058971066705,
+      "note": "rank-only score; probability metrics not applicable"
+    },
+    "bootstrap": {
+      "n_events": 109,
+      "n_weeks": 39,
+      "n_boot": 2000,
+      "n_skipped_single_class": 0,
+      "level": 0.95,
+      "seed": 0,
+      "auc": {
+        "zero_shot_headlines": {
+          "point": 0.43509127789046653,
+          "lo": 0.3293967889769109,
+          "hi": 0.562728096179183,
+          "boot_sd": 0.05910920345950368
+        },
+        "zero_shot_document": {
+          "point": 0.41311697092630156,
+          "lo": 0.30501528213166146,
+          "hi": 0.5356187840262783,
+          "boot_sd": 0.0591121822664102
+        }
+      },
+      "diff": {
+        "zero_shot_headlines - zero_shot_document": {
+          "point": 0.02197430696416497,
+          "lo": -0.1265844837488301,
+          "hi": 0.18215891699281497,
+          "boot_sd": 0.07971122080674671,
+          "frac_le_0": 0.3745
+        }
+      }
+    }
+  },
+  "provenance": {
+    "dependencies": {
+      "python": "3.13.17",
+      "torch": "2.12.1",
+      "transformers": "5.12.1",
+      "tokenizers": "0.22.2",
+      "huggingface-hub": "1.20.1",
+      "safetensors": "0.8.0",
+      "numpy": "2.4.6",
+      "pandas": "3.0.3",
+      "scikit-learn": "1.9.0",
+      "yfinance": "1.4.1"
+    },
+    "platform": {
+      "system": "Darwin",
+      "release": "25.6.0",
+      "machine": "arm64",
+      "device": "mps"
+    },
+    "git": {
+      "commit": "939ce858a95b453a16208e5e4c63f5669bb741a4",
+      "dirty": false
+    }
+  }
+}

@@ -1,0 +1,11 @@
+# Runtime dependencies (compatible ranges around the tested versions).
+# The exact tested environment is pinned in requirements-lock.txt.
+torch>=2.12,<3
+transformers>=5.12,<6
+tokenizers>=0.22,<0.23
+huggingface-hub>=1.20,<2
+yfinance>=1.4,<2
+lxml>=6.1           # pandas.read_html, used by yfinance get_earnings_dates()
+pandas>=3.0,<4
+numpy>=2.4,<3
+scikit-learn>=1.9,<2

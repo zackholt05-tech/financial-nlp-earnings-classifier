@@ -1,0 +1,239 @@
+{
+  "data_mode": "synthetic-negative-control",
+  "modalities": "both",
+  "metrics": {
+    "neural": {
+      "val": {
+        "n": 58,
+        "n_pos": 23,
+        "n_neg": 35,
+        "auc": 0.6,
+        "average_precision": 0.44950286604305634,
+        "brier": 0.242949408128849,
+        "log_loss": 0.6789912753970484,
+        "accuracy": 0.5517241379310345,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "pos_rate": 0.39655172413793105,
+        "majority_class_acc": 0.39655172413793105,
+        "confusion_matrix": [
+          [
+            32,
+            3
+          ],
+          [
+            23,
+            0
+          ]
+        ],
+        "undefined": {}
+      },
+      "test": {
+        "n": 78,
+        "n_pos": 38,
+        "n_neg": 40,
+        "auc": 0.44605263157894737,
+        "average_precision": 0.4539892395123353,
+        "brier": 0.25177827335229647,
+        "log_loss": 0.6967191144840318,
+        "accuracy": 0.5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "pos_rate": 0.48717948717948717,
+        "majority_class_acc": 0.48717948717948717,
+        "confusion_matrix": [
+          [
+            39,
+            1
+          ],
+          [
+            38,
+            0
+          ]
+        ],
+        "undefined": {}
+      }
+    },
+    "logistic_regression": {
+      "val": {
+        "n": 58,
+        "n_pos": 23,
+        "n_neg": 35,
+        "auc": 0.5776397515527951,
+        "average_precision": 0.5213040012521077,
+        "brier": 0.35065872694275785,
+        "log_loss": 1.186368256075591,
+        "accuracy": 0.4827586206896552,
+        "precision": 0.3793103448275862,
+        "recall": 0.4782608695652174,
+        "f1": 0.4230769230769231,
+        "pos_rate": 0.39655172413793105,
+        "majority_class_acc": 0.39655172413793105,
+        "confusion_matrix": [
+          [
+            17,
+            18
+          ],
+          [
+            12,
+            11
+          ]
+        ],
+        "undefined": {}
+      },
+      "test": {
+        "n": 78,
+        "n_pos": 38,
+        "n_neg": 40,
+        "auc": 0.5144736842105263,
+        "average_precision": 0.5071075758894603,
+        "brier": 0.3626622376903522,
+        "log_loss": 1.3814475798938455,
+        "accuracy": 0.5128205128205128,
+        "precision": 0.5,
+        "recall": 0.5263157894736842,
+        "f1": 0.5128205128205128,
+        "pos_rate": 0.48717948717948717,
+        "majority_class_acc": 0.48717948717948717,
+        "confusion_matrix": [
+          [
+            20,
+            20
+          ],
+          [
+            18,
+            20
+          ]
+        ],
+        "undefined": {}
+      }
+    },
+    "majority_class": {
+      "val": {
+        "n": 58,
+        "n_pos": 23,
+        "n_neg": 35,
+        "auc": 0.5,
+        "average_precision": 0.39655172413793105,
+        "brier": 0.2584341955577106,
+        "log_loss": 0.7100450029218363,
+        "accuracy": 0.39655172413793105,
+        "precision": 0.39655172413793105,
+        "recall": 1.0,
+        "f1": 0.5679012345679012,
+        "pos_rate": 0.39655172413793105,
+        "majority_class_acc": 0.39655172413793105,
+        "confusion_matrix": [
+          [
+            0,
+            35
+          ],
+          [
+            0,
+            23
+          ]
+        ],
+        "undefined": {}
+      },
+      "test": {
+        "n": 78,
+        "n_pos": 38,
+        "n_neg": 40,
+        "auc": 0.5,
+        "average_precision": 0.48717948717948717,
+        "brier": 0.2521113283687649,
+        "log_loss": 0.6973786907260325,
+        "accuracy": 0.48717948717948717,
+        "precision": 0.48717948717948717,
+        "recall": 1.0,
+        "f1": 0.6551724137931034,
+        "pos_rate": 0.48717948717948717,
+        "majority_class_acc": 0.48717948717948717,
+        "confusion_matrix": [
+          [
+            0,
+            40
+          ],
+          [
+            0,
+            38
+          ]
+        ],
+        "undefined": {}
+      }
+    }
+  },
+  "train_info": {
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.6606501142183939,
+        "val_auc": 0.6,
+        "val_log_loss": 0.6789912753970484,
+        "val_acc": 0.5517241379310345
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.6509625315666199,
+        "val_auc": 0.5465838509316769,
+        "val_log_loss": 0.6835704795892733,
+        "val_acc": 0.5517241379310345
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.6702763570679559,
+        "val_auc": 0.4869565217391304,
+        "val_log_loss": 0.6946791440516161,
+        "val_acc": 0.5344827586206896
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.639869855509864,
+        "val_auc": 0.4782608695652174,
+        "val_log_loss": 0.7044850848614431,
+        "val_acc": 0.39655172413793105
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.6789475149578519,
+        "val_auc": 0.4919254658385093,
+        "val_log_loss": 0.7009284901481254,
+        "val_acc": 0.4482758620689655
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.6281673378414578,
+        "val_auc": 0.48447204968944096,
+        "val_log_loss": 0.6962558918724482,
+        "val_acc": 0.5
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.6165241400400797,
+        "val_auc": 0.4869565217391304,
+        "val_log_loss": 0.7040008517101758,
+        "val_acc": 0.4482758620689655
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.6517874267366197,
+        "val_auc": 0.47826086956521735,
+        "val_log_loss": 0.7001071369186529,
+        "val_acc": 0.5172413793103449
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.6193561752637228,
+        "val_auc": 0.4919254658385093,
+        "val_log_loss": 0.7077296074638804,
+        "val_acc": 0.4482758620689655
+      }
+    ],
+    "selection_metric": "val_auc",
+    "best_val_auc": 0.6,
+    "best_epoch": 1
+  },
+  "n_trainable_params": 3075
+}

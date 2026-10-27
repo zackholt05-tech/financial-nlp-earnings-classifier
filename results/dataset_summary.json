@@ -1,0 +1,214 @@
+{
+  "label": "Aggregates of the frozen real datasets (not redistributed)",
+  "document_only": {
+    "fingerprint": "2caa9d48aedd07abb76bead601c3ddec026f6493edbb9fcf429defbf69e98259",
+    "collection_report": {
+      "tickers_requested": 30,
+      "announcements_seen": 1200,
+      "usable_events": 1148,
+      "excluded": {
+        "no_text": 51,
+        "no_label_window": 1
+      },
+      "document_missing": {
+        "no_document_in_window": 51
+      },
+      "document_exhibit_types": {
+        "EX-99.1": 1131,
+        "EX-99.01": 2,
+        "EX-95.1": 1,
+        "EX-99": 4,
+        "EX-99.15": 11
+      },
+      "errors": []
+    },
+    "events_after_purge": 1138,
+    "split": {
+      "val_start": "2023-04-27",
+      "test_start": "2024-10-31",
+      "purged": {
+        "train": 6,
+        "val": 4
+      },
+      "splits": {
+        "train": {
+          "n": 740,
+          "n_pos": 348,
+          "pos_rate": 0.4702702702702703,
+          "first_entry": "2016-10-19",
+          "last_entry": "2023-04-24",
+          "last_exit": "2023-04-26",
+          "modality": {
+            "both": 0,
+            "document_only": 740,
+            "headlines_only": 0,
+            "neither": 0
+          }
+        },
+        "val": {
+          "n": 169,
+          "n_pos": 89,
+          "pos_rate": 0.5266272189349113,
+          "first_entry": "2023-04-27",
+          "last_entry": "2024-10-24",
+          "last_exit": "2024-10-28",
+          "modality": {
+            "both": 0,
+            "document_only": 169,
+            "headlines_only": 0,
+            "neither": 0
+          }
+        },
+        "test": {
+          "n": 229,
+          "n_pos": 104,
+          "pos_rate": 0.45414847161572053,
+          "first_entry": "2024-10-31",
+          "last_entry": "2026-10-23",
+          "last_exit": "2026-10-27",
+          "modality": {
+            "both": 0,
+            "document_only": 229,
+            "headlines_only": 0,
+            "neither": 0
+          }
+        }
+      }
+    },
+    "sessions": {
+      "AMC": 684,
+      "BMO": 448,
+      "DMH": 6
+    },
+    "per_year": {
+      "2016": {
+        "train": 18,
+        "up": 8
+      },
+      "2017": {
+        "train": 112,
+        "up": 55
+      },
+      "2018": {
+        "train": 112,
+        "up": 50
+      },
+      "2019": {
+        "train": 115,
+        "up": 56
+      },
+      "2020": {
+        "train": 116,
+        "up": 50
+      },
+      "2021": {
+        "train": 116,
+        "up": 52
+      },
+      "2022": {
+        "train": 116,
+        "up": 57
+      },
+      "2023": {
+        "train": 35,
+        "up": 56,
+        "val": 74
+      },
+      "2024": {
+        "val": 95,
+        "up": 61,
+        "test": 16
+      },
+      "2025": {
+        "test": 116,
+        "up": 48
+      },
+      "2026": {
+        "test": 97,
+        "up": 48
+      }
+    },
+    "per_ticker": {
+      "n_tickers": 30,
+      "min": 1,
+      "median": 40.0,
+      "max": 40,
+      "counts": {
+        "AAPL": 40,
+        "ABBV": 40,
+        "ADBE": 40,
+        "AMD": 39,
+        "AMZN": 40,
+        "BAC": 40,
+        "COST": 38,
+        "CRM": 40,
+        "CSCO": 40,
+        "DIS": 30,
+        "GOOGL": 38,
+        "HD": 40,
+        "INTC": 40,
+        "JNJ": 40,
+        "JPM": 40,
+        "KO": 38,
+        "MCD": 38,
+        "META": 40,
+        "MSFT": 39,
+        "NFLX": 40,
+        "NKE": 40,
+        "NVDA": 40,
+        "ORCL": 40,
+        "PEP": 39,
+        "PG": 40,
+        "TMO": 40,
+        "TSLA": 40,
+        "V": 38,
+        "WMT": 40,
+        "XOM": 1
+      }
+    },
+    "document_chars": {
+      "p10": 12861,
+      "median": 28876,
+      "p90": 49287
+    },
+    "document_tokens": {
+      "tokenizer": "ProsusAI/finbert@4556d13015211d73dccd3fdd39d39232506f3e43",
+      "median": 6862,
+      "p10": 2999,
+      "p90": 12421,
+      "chunk_body_tokens": 382,
+      "share_longer_than_1_chunk": 1.0,
+      "share_longer_than_8_chunks": 0.8919156414762741,
+      "median_share_encoded_8_chunks": 0.4453187637483287
+    }
+  },
+  "with_headlines": {
+    "fingerprint": "ce118a67e773bc89b867d1965dac2ae9242f008eb776c3dc9fcdc5b96f5adcfa",
+    "events_after_purge": 1140,
+    "events_with_headlines": 111,
+    "with_headlines_by_split": {
+      "test": 111
+    },
+    "modality_by_split": {
+      "train": {
+        "both": 0,
+        "document_only": 740,
+        "headlines_only": 0,
+        "neither": 0
+      },
+      "val": {
+        "both": 0,
+        "document_only": 169,
+        "headlines_only": 0,
+        "neither": 0
+      },
+      "test": {
+        "both": 109,
+        "document_only": 120,
+        "headlines_only": 2,
+        "neither": 0
+      }
+    },
+    "first_entry_with_headlines": "2025-11-05"
+  }
+}
